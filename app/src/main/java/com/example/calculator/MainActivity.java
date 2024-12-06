@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import android.os.Bundle;
 import android.view.View;
+import android.util.Log;
 import java.util.Locale;
 import android.content.res.Configuration;
 import android.widget.Button;
@@ -9,17 +10,19 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import org.mariuszgromada.math.mxparser.Expression;
 
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "CalculatorApp"; // Статичний тег для логів
     private TextView display;
     private String currentInput = "";
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.d(TAG, "onCreate: Запущено головну активність"); // Повідомлення про запуск
 
         display = findViewById(R.id.display);
 
@@ -40,11 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
         changelanguageButton.setOnClickListener(v -> {
             String currentLanguage = Locale.getDefault().getLanguage();
+            Log.d(TAG, "Зміна мови: поточна мова - " + currentLanguage);
             if (currentLanguage.equals("uk")) {
                 setLanguage("en");
-            } else if(currentLanguage.equals("en")){
+            } else if (currentLanguage.equals("en")) {
                 setLanguage("uk");
             }
+            Log.i(TAG, "Мова змінена на: " + Locale.getDefault().getLanguage());
             recreate();
         });
 
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         acButton.setOnClickListener(v -> {
             currentInput = "";
             display.setText(getString(R.string.default_display));
+            Log.d(TAG, "Кнопка AC: дисплей очищено");
         });
 
         // Кнопка C (стерти останній символ)
@@ -59,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
             if (!currentInput.isEmpty()) {
                 currentInput = currentInput.substring(0, currentInput.length() - 1);
                 display.setText(currentInput.isEmpty() ? getString(R.string.default_display) : currentInput);
+                Log.d(TAG, "Кнопка C: останній символ стерто, поточний ввід - " + currentInput);
+            } else {
+                Log.w(TAG, "Кнопка C: нічого видаляти");
             }
         });
 
@@ -67,14 +76,19 @@ public class MainActivity extends AppCompatActivity {
             try {
                 double result = evaluateExpression(currentInput);
                 display.setText(formatResult(result));
-                currentInput = formatResult(result); // Зберігаємо результат як поточний ввід
+                currentInput = formatResult(result);
+                Log.i(TAG, "Обчислення успішне: " + result);
             } catch (Exception e) {
                 display.setText(getString(R.string.error_message));
+                Log.e(TAG, "Помилка під час обчислення: " + e.getMessage(), e);
             }
         });
 
         // Кнопка Exit (вихід)
-        exitButton.setOnClickListener(v -> finish());
+        exitButton.setOnClickListener(v -> {
+            Log.d(TAG, "Кнопка Exit: вихід із застосунку");
+            finish();
+        });
 
         // Налаштування кнопок
         setButtonListener(R.id.button_1, "1");
@@ -113,7 +127,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 currentInput += value; // Додаємо вибраний символ
             }
-            display.setText(currentInput); // Оновлюємо текст на екрані
+            display.setText(currentInput);
+            Log.d(TAG, "Натиснуто кнопку: " + value + ", поточний ввід - " + currentInput);
         });
     }
 
@@ -123,28 +138,23 @@ public class MainActivity extends AppCompatActivity {
         Configuration config = new Configuration();
         config.locale = locale;
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        Log.i(TAG, "Мова змінена на: " + languageCode);
     }
 
     private double evaluateExpression(String expression) {
-        // Заміняємо функції на відповідні математичні вирази
         expression = expression.replace("π", String.valueOf(Math.PI));
-        expression = expression.replace("sqrt", "sqrt");
-        expression = expression.replace("sin", "sin");
-        expression = expression.replace("cos", "cos");
-        expression = expression.replace("tan", "tan");
-        expression = expression.replace("log", "log10");
-
-        // Обчислення через бібліотеку mxparser
         Expression expr = new Expression(expression);
         if (!expr.checkSyntax()) {
+            Log.e(TAG, "Невірний синтаксис виразу: " + expression);
             throw new IllegalArgumentException("Invalid expression");
         }
+        Log.d(TAG, "Обчислення виразу: " + expression);
         return expr.calculate();
     }
 
     private String formatResult(double result) {
         if (result == (long) result) {
-            return String.valueOf((long) result); // Якщо ціле число, видаляємо дробову частину
+            return String.valueOf((long) result);
         } else {
             return String.valueOf(result);
         }

@@ -15,7 +15,7 @@
         android:ellipsize="start"
         android:gravity="end|center_vertical"
         android:padding="16dp"
-        android:text="0"
+        android:text="@string/button_0"
         android:textColor="#3D52A0"
         android:textSize="24sp" />
 
@@ -33,7 +33,7 @@
             android:layout_columnWeight="1"
             android:layout_marginEnd="5dp"
             android:background="#3D52A0"
-            android:text="AC"
+            android:text="@string/button_ac"
             android:textColor="#fff" />
 
         <Button
@@ -45,7 +45,7 @@
             android:layout_columnWeight="1"
             android:layout_marginEnd="5dp"
             android:background="#3D52A0"
-            android:text="("
+            android:text="@string/button_left_paren"
             android:textColor="#fff" />
 
         <Button
@@ -55,7 +55,7 @@
             android:layout_columnWeight="1"
             android:layout_marginEnd="5dp"
             android:background="#3D52A0"
-            android:text=")"
+            android:text="@string/button_right_paren"
             android:textColor="#fff" />
 
         <Button
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:background="#3D52A0"
-            android:text="C"
+            android:text="@string/button_c"
             android:textColor="#fff" />
 
         <Button
@@ -75,7 +75,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#8697C4"
-            android:text="sin"
+            android:text="@string/button_sin"
             android:textColor="#000" />
 
         <Button
@@ -86,7 +86,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#8697C4"
-            android:text="cos"
+            android:text="@string/button_cos"
             android:textColor="#000" />
 
         <Button
@@ -97,7 +97,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#8697C4"
-            android:text="tan"
+            android:text="@string/button_tan"
             android:textColor="#000" />
 
         <Button
@@ -108,7 +108,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="5dp"
             android:background="#8697C4"
-            android:text="log"
+            android:text="@string/button_log"
             android:textColor="#000" />
 
         <Button
@@ -119,7 +119,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#ADBBDA"
-            android:text="x!"
+            android:text="@string/button_factorial"
             android:textColor="#000" />
 
         <Button
@@ -130,7 +130,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#ADBBDA"
-            android:text="x²"
+            android:text="@string/button_square"
             android:textColor="#000" />
 
         <Button
@@ -141,7 +141,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#ADBBDA"
-            android:text="1/x"
+            android:text="@string/button_reciprocal"
             android:textColor="#000" />
 
         <Button
@@ -151,7 +151,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="5dp"
             android:background="#ADBBDA"
-            android:text="√"
+            android:text="@string/button_sqrt"
             android:textColor="#000" />
 
         <Button
@@ -162,7 +162,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="7"
+            android:text="@string/button_7"
             android:textColor="#3D52A0" />
 
         <Button
@@ -173,7 +173,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="8"
+            android:text="@string/button_8"
             android:textColor="#3D52A0" />
 
         <Button
@@ -184,7 +184,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="9"
+            android:text="@string/button_9"
             android:textColor="#3D52A0" />
 
         <Button
@@ -194,7 +194,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="5dp"
             android:background="#8697C4"
-            android:text="÷"
+            android:text="@string/button_divide"
             android:textColor="#000" />
 
         <Button
@@ -205,7 +205,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="4"
+            android:text="@string/button_4"
             android:textColor="#3D52A0" />
 
         <Button
@@ -216,7 +216,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="5"
+            android:text="@string/button_5"
             android:textColor="#3D52A0" />
 
         <Button
@@ -227,7 +227,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="6"
+            android:text="@string/button_6"
             android:textColor="#3D52A0" />
 
         <Button
@@ -237,7 +237,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="5dp"
             android:background="#8697C4"
-            android:text="×"
+            android:text="@string/button_multiply"
             android:textColor="#000" />
 
         <Button
@@ -248,7 +248,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="1"
+            android:text="@string/button_1"
             android:textColor="#3D52A0" />
 
         <Button
@@ -259,7 +259,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="2"
+            android:text="@string/button_2"
             android:textColor="#3D52A0" />
 
         <Button
@@ -270,7 +270,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="3"
+            android:text="@string/button_3"
             android:textColor="#3D52A0" />
 
         <Button
@@ -280,7 +280,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="5dp"
             android:background="#8697C4"
-            android:text="+"
+            android:text="@string/button_plus"
             android:textColor="#000" />
 
         <Button
@@ -291,7 +291,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#ADBBDA"
-            android:text="π"
+            android:text="@string/button_pi"
             android:textColor="#000" />
 
         <Button
@@ -302,7 +302,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="0"
+            android:text="@string/button_0"
             android:textColor="#3D52A0" />
 
         <Button
@@ -313,7 +313,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:background="#ADBBDA"
-            android:text="."
+            android:text="@string/button_dot"
             android:textColor="#000" />
 
 
@@ -325,7 +325,7 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="5dp"
             android:background="#8697C4"
-            android:text="-"
+            android:text="@string/button_minus"
             android:textColor="#000" />
 
         <Button
@@ -338,7 +338,7 @@
             android:layout_marginTop="35dp"
             android:layout_marginEnd="5dp"
             android:background="#EDE8F9"
-            android:text="Exit"
+            android:text="@string/button_exit"
             android:textColor="#3D52A0" />
 
         <Button
@@ -349,8 +349,22 @@
             android:layout_columnWeight="1"
             android:layout_marginTop="35dp"
             android:background="#8697C4"
-            android:text="="
+            android:text="@string/button_equal"
             android:textColor="#000" />
 
+        <Button
+            android:id="@+id/button_change_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:layout_columnSpan="4"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="#ADBBDA"
+            android:text="@string/button_change_language"
+            android:textColor="#000"/>
+
     </GridLayout>
+
 </LinearLayout>

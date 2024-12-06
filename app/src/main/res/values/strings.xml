@@ -17,6 +17,7 @@
     <string name="button_multiply">×</string>
     <string name="button_divide">÷</string>
     <string name="button_cos">cos</string>
+    <string name="button_sin">sin</string>
     <string name="button_tan">tan</string>
     <string name="button_log">log</string>
     <string name="button_factorial">x!</string>
@@ -27,4 +28,9 @@
     <string name="button_right_paren">)</string>
     <string name="button_equal">=</string>
     <string name="button_exit">Exit</string>
+    <string name="button_ac">AC</string>
+    <string name="button_c">C</string>
+    <string name="error_message">Error</string>
+    <string name="default_display">0</string>
+    <string name="button_change_language">Change language</string>
 </resources>
